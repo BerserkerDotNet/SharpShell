@@ -44,9 +44,15 @@ steps:
     publishWebProjects: false
     projects: 'SharpShell\\SharpShell.csproj'
     arguments: '--configuration $(BuildConfiguration) --output $(build.artifactstagingdirectory)'
+    zipAfterPublish: false
 
-- task: PublishBuildArtifacts@1
-  displayName: 'Publish Artifact'
+- task: GitHubPagesPublish@1
+  displayName: 'Publish'
   inputs:
-    PathtoPublish: '$(build.artifactstagingdirectory)'
-  condition: succeededOrFailed()
+    docPath: '$(build.artifactstagingdirectory)\\drop\\SharpShell\\dist\\*'
+    githubusername: 'berserkerdotnet'
+    githubemail: 'berserkerdotnet@gmail.com'
+    githubaccesstoken: '$(GitHubToken)'
+    repositoryname: 'SharpShell'
+    branchname: 'gh-pages'
+    commitmessage: 'Automated Release $(Release.ReleaseId)'
