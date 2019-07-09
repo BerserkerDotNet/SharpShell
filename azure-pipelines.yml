@@ -47,9 +47,9 @@ steps:
     zipAfterPublish: false
 
 - task: GitHubPagesPublish@1
-  displayName: 'Publish'
+  displayName: 'Publish to GitHub Pages'
   inputs:
-    docPath: '$(build.artifactstagingdirectory)\\drop\\SharpShell\\dist\\*'
+    docPath: '$(build.artifactstagingdirectory)\\SharpShell\\dist\\*'
     githubusername: 'berserkerdotnet'
     githubemail: 'berserkerdotnet@gmail.com'
     githubaccesstoken: '$(GitHubToken)'
