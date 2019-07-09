@@ -17,6 +17,13 @@ variables:
 steps:
 - task: NuGetToolInstaller@0
 
+- task: UseDotNet@2
+  displayName: 'Use DotNet'
+  inputs:
+    packageType: 'sdk'
+    version: '3.0.100-preview6-012264'
+    includePreviewVersions: true
+
 - task: DotNetCoreCLI@2
   displayName: 'Restore'
   inputs:
