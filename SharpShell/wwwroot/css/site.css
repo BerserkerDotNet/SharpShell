@@ -1,0 +1,82 @@
+﻿body {
+    background-color: gray;
+}
+
+.terminal {
+    background-color: black;
+    min-height: 700px;
+    border-radius: 14px;
+    margin-top: 50px;
+    font-size: 22px;
+    box-shadow: 6px 5px 0px 0px #00000073;
+}
+
+.output-area {
+    color: white;
+    height: 650px;
+    overflow: auto;
+}
+
+.user-input {
+    color: lightgrey;
+}
+
+.input-error {
+    color: red;
+}
+
+.output-container {
+    padding: 10px;
+}
+
+.output-text {
+    color: yellow;
+}
+
+.input-section {
+    top: 700px;
+    position: fixed;
+}
+
+.input-area {
+    resize: none;
+    width: calc(100% - 25px);
+    border: none;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.input-tick {
+    color: white;
+    vertical-align: top;
+}
+
+input:focus,
+textarea:focus {
+    outline-width: 0;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: lightgrey;
+}
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        border-radius: 5px;
+        background: darkgrey;
+    }

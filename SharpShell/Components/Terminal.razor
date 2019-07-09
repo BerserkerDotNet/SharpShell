@@ -1,0 +1,13 @@
+﻿@inherits TerminalBase
+
+<div class="container terminal">
+    <div class="row p-3">
+        <div class="col-md-12 output-area">
+            @((MarkupString)Output)
+        </div>
+        <div class="col-md-12">
+            <span class="input-tick">&gt;</span>
+            <input autofocus class="input-area" @bind="Input" @onkeyup="@OnKeyUp" />
+        </div>
+    </div>
+</div>
