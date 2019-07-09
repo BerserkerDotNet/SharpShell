@@ -49,7 +49,7 @@ steps:
 - task: GitHubPagesPublish@1
   displayName: 'Publish to GitHub Pages'
   inputs:
-    docPath: '$(build.artifactstagingdirectory)\\SharpShell\\dist\\*'
+    docPath: '$(build.artifactstagingdirectory)\\SharpShell\\SharpShell\\dist\\*'
     githubusername: 'berserkerdotnet'
     githubemail: 'berserkerdotnet@gmail.com'
     githubaccesstoken: '$(GitHubToken)'
